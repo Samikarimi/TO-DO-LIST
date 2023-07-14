@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, orange, rgb(238, 84, 18));
+}
+
+.container {
+  width: 380px;
+  height: auto;
+  background-color: white;
+  margin: auto;
+  margin-top: 1em;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 20px;
+  color: rgb(203, 200, 200);
+  place-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+
+.input-section {
+  background-color: rgb(203, 200, 200);
+  display: flex;
+  border-radius: 33px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background: rgb(203, 200, 200);
+  padding: 11px;
+}
+
+button {
+  background-color: orangered;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 520;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+button:hover {
+  background-color: orange;
+  font-weight: 700;
+}
+
+ul li {
+  line-height: 30px;
+  list-style: none;
+  padding: 12px 8px 12px 10px;
+  cursor: pointer;
+  margin-left: 35px;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-image: url(/images/bullet\ point.png);
+  background-size: cover;
+  background-position: center;
+  top: 14px;
+  /* right: 240px; */
+  left: -25px;
+}
+
+ul li span {
+  position: absolute;
+  right: 5px;
+  background-color: red;
+  padding: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  top: 16px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(/images/checked\ icon.jfif);
+}
